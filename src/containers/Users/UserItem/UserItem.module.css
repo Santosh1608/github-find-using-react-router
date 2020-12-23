@@ -1,0 +1,60 @@
+.UserItem Img {
+  width: 25%;
+  padding: 2rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 200 !important;
+}
+.UserItem img {
+  width: 90%;
+  transition: all 1s ease-in-out;
+  z-index: 300;
+}
+.UserItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  border-radius: 5%;
+}
+.UserItem {
+  min-height: 30vh;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  border-radius: 5%;
+  color: white;
+  box-shadow: 1px 1px 3px rgb(130, 130, 133);
+}
+.UserItem img:hover {
+  width: 100%;
+}
+.UserItem h4 {
+  font-size: 1.03rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+.Default {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 700px) {
+  .UserItem img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .UserItem img {
+    width: 80%;
+  }
+  .UserItem {
+    width: 80%;
+    margin: auto;
+  }
+}

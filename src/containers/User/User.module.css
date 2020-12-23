@@ -1,0 +1,14 @@
+.UserCover {
+  background: url('../../assets/userBack.jpg') repeat center center/cover;
+  min-height: 94vh;
+  position: relative;
+}
+.UserCover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}

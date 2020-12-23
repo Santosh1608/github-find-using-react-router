@@ -1,0 +1,116 @@
+.UserData {
+  position: relative;
+  color: rgb(149, 150, 149);
+  z-index: 100;
+  background: transparent;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.UserData::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.UserData * {
+  flex: 1;
+}
+
+.UserData Img {
+  padding: 1rem;
+}
+
+.UserData img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+.UserData .Data {
+  text-align: left;
+  padding: 1rem;
+  z-index: 200;
+}
+
+.UserData .Data h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+  padding: 1rem 0.5rem;
+}
+.UserData .Data p {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+.Data a {
+  text-decoration: none;
+  border: 1px solid rgb(94, 93, 93);
+  padding: 0.6rem 1rem;
+  margin: 2px;
+  margin-top: 1rem;
+  color: rgb(156, 156, 156);
+  display: inline-block;
+  box-shadow: 1px 1px 2px rgb(66, 65, 65);
+}
+.Data span {
+  font-weight: bolder;
+}
+a.Repos {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  border: 1px solid rgb(54, 53, 53);
+  transition: all 1s ease-out;
+  box-shadow: 1px 1px 2px rgb(65, 63, 63);
+}
+.Repos::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.Repos:hover {
+  padding: 0.8rem 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .UserData {
+    flex-direction: column;
+  }
+  .UserData .Data h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-top: 2rem;
+    padding: 0rem 0.5rem;
+  }
+  .UserData Img {
+    padding: 0rem;
+  }
+  .UserData .Data {
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+    z-index: 200;
+    text-align: center;
+  }
+  .UserData .Data p {
+    font-size: 1rem;
+  }
+  .UserData a {
+    width: 100%;
+  }
+}

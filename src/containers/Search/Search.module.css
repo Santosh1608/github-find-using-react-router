@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cormorant+Unicase:wght@300&display=swap');
+.Landingpage {
+  background: url('../../assets/github.jpg') no-repeat center center/cover;
+  min-height: 94vh;
+  position: relative;
+}
+.Landingpage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 1s ease-in-out;
+}
+.Landingpage:hover::before {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 700px) {
+  .Landingpage {
+    background-position-x: -8em;
+    background-position-y: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .Landingpage {
+    background-position-x: -8em;
+    background-position-y: 1em;
+  }
+}
+
+.Search {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.Search h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  animation: Search 1s ease-out 1.2s forwards;
+}
+.Search input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 10px;
+  border: 0.4px solid rgb(78, 77, 77);
+  background-color: transparent;
+  border-radius: 5px;
+  color: rgb(155, 154, 154);
+  font-size: 1rem;
+}
+.Search input:focus {
+  outline: none;
+  box-shadow: 1px 1px 2px rgb(77, 74, 74);
+}
+.Search button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgb(78, 78, 78);
+  background: transparent;
+  color: rgb(243, 237, 237);
+  box-shadow: 1px 1px 1px rgb(119, 117, 117);
+  font-size: 1rem;
+  font-weight: 100;
+  outline: none;
+}
+
+.Search button:hover {
+  padding: 0.8rem 1.2rem;
+}
+
+.SearchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 92vh;
+  font-family: 'Cormorant Unicase', serif;
+  transform: translateY(-100%);
+  animation: SearchForm 1s ease-out 1s forwards;
+}
+
+@keyframes SearchForm {
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes Search {
+  20% {
+    color: rgb(70, 236, 37);
+  }
+  40% {
+    color: rgb(240, 29, 29);
+  }
+  60% {
+    color: rgb(71, 83, 196);
+  }
+  80% {
+    color: rgb(7, 77, 80);
+  }
+  100% {
+    color: white;
+  }
+}
+
+@media (max-width: 700px) {
+  .Search h1 {
+    font-size: 3rem;
+  }
+  .SearchWrapper {
+    min-height: 70vh;
+  }
+  .Search {
+    padding: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .Search h1 {
+    font-size: 2.5rem;
+  }
+  .Search {
+    padding: 2rem;
+  }
+}

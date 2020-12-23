@@ -1,0 +1,20 @@
+.UserRepos {
+  z-index: 200;
+  position: relative;
+  background: transparent;
+  color: rgb(136, 133, 133);
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.UserRepos::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -10;
+}
